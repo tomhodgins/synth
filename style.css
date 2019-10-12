@@ -259,7 +259,7 @@ input[type=range] {
     height: 100vw;
     transform:
       translate(-50%, -50%)
-      rotateZ(90deg)
+      rotateZ(-90deg)
     ;
   }
   keyboard-key {
