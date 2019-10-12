@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<meta name=apple-mobile-web-app-capable content=yes>
+<meta name=viewport content="user-scalable=no width=device-width, initial-scale=1">
+<link type=image/x-icon rel="shortcut icon">
+<link rel=apple-touch-icon>
+<title>Synth</title>
+
+<link rel=stylesheet href=style.css>
+
+<nav>
+  <h1>Synth</h1>
+  <input id=gain type=range min=0 max=1 step=.05>
+  <input id=distortion type=range min=0 max=100 step=1>
+  <button data-waveform=sine>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 240 240">
+      <defs>
+        <path id="a" d="M0 0h240v240H0z"/>
+      </defs>
+      <clipPath id="b">
+        <use overflow="visible" xlink:href="#a"/>
+      </clipPath>
+      <path fill="none" stroke="currentColor" stroke-width="24" d="M-60 168c42 0 78-96 120-96s78 96 120 96 78-96 120-96" clip-path="url(#b)"/>
+    </svg>
+  </button>
+  <button data-waveform=sawtooth>
+    <svg data-waveform="sawtooth" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 240 240">
+      <defs>
+        <path id="a" d="M0 0h240v240H0z"/>
+      </defs>
+      <clipPath id="b">
+        <use overflow="visible" xlink:href="#a"/>
+      </clipPath>
+      <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-width="24" d="M0 120l120-48v96l120-48" clip-path="url(#b)"/>
+    </svg>
+  </button>
+  <button data-waveform=square>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+      <path fill="none" stroke="currentColor" stroke-width="24" d="M0 168h60V72h120v96h60"/>
+    </svg>
+  </button>
+  <button data-waveform=triangle>
+    <svg data-waveform="triangle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 240 240">
+      <defs>
+        <path id="a" d="M0 0h240v240H0z"/>
+      </defs>
+      <clipPath id="b">
+        <use overflow="visible" xlink:href="#a"/>
+      </clipPath>
+      <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-width="24" d="M0 168l120-96 120 96" clip-path="url(#b)"/>
+    </svg>
+  </button>
+</nav>
+
+<piano-keyboard data-base-note=a-1 data-size=41></piano-keyboard>
+
+<script src=synth.js></script>
+<script>
+  state.theme = 'green'
+  setTheme('green')
+  setTimeout(() => drawFavicon())
+</script>
