@@ -13,8 +13,8 @@ html {
 }
 body {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  width: calc(100px * var(--innerHeight));
+  height: calc(100px * var(--innerWidth));
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -255,8 +255,8 @@ input[type=range] {
 }
 @media (orientation: portrait) {
   body {
-    width: 100vh;
-    height: 100vw;
+    width: calc(100px * var(--innerWidth));
+    height: calc(100px * var(--innerHeight));
     transform:
       translate(-50%, -50%)
       rotateZ(-90deg)

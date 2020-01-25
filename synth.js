@@ -52,13 +52,20 @@ const themes = {
     'black-down': 'yellow',
     'indicator': 'yellow'
   },
-  nineties: {
+  pink: {
     'white-key': 'magenta',
     'white-down': 'purple',
     'black-key': 'lime',
     'black-down': 'yellow',
     'indicator': 'cyan'
-  }
+  },
+  aqua: {
+    'white-key': 'aqua',
+    'white-down': 'darkcyan',
+    'black-key': 'white',
+    'black-down': 'aquamarine',
+    'indicator': 'hotpink'
+  },
 }
 
 // Tonal Scale
